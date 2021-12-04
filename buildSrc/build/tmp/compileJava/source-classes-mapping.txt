@@ -1,2 +1,4 @@
-RuDromlDepsPlugin.java
- RuDromlDepsPlugin
+RuDromlApplicationPlugin.java
+ RuDromlApplicationPlugin
+RuDromlCommonsPlugin.java
+ RuDromlCommonsPlugin

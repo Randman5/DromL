@@ -5,16 +5,17 @@ import org.gradle.groovy.scripts.ScriptSource;
 import org.gradle.groovy.scripts.TextResourceScriptSource;
 import org.gradle.internal.resource.StringTextResource;
 /**
- * Precompiled ru.droml.deps script plugin.
+ * Precompiled ru.droml.application script plugin.
  **/
-public class RuDromlDepsPlugin implements org.gradle.api.Plugin<org.gradle.api.internal.project.ProjectInternal> {
+public class RuDromlApplicationPlugin implements org.gradle.api.Plugin<org.gradle.api.internal.project.ProjectInternal> {
     private static final String MIN_SUPPORTED_GRADLE_VERSION = "5.0";
     public void apply(org.gradle.api.internal.project.ProjectInternal target) {
         assertSupportedByCurrentGradleVersion();
                 target.getPluginManager().apply("com.android.application");
+        target.getPluginManager().apply("ru.droml.commons");
 
         try {
-            Class<? extends BasicScript> precompiledScriptClass = Class.forName("precompiled_RuDromlDeps").asSubclass(BasicScript.class);
+            Class<? extends BasicScript> precompiledScriptClass = Class.forName("precompiled_RuDromlApplication").asSubclass(BasicScript.class);
             BasicScript script = precompiledScriptClass.getDeclaredConstructor().newInstance();
             script.setScriptSource(scriptSource(precompiledScriptClass));
             script.init(target, target.getServices());
