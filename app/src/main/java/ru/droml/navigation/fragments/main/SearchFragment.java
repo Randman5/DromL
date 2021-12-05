@@ -8,9 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import ru.droml.MainActivity;
 import ru.droml.R;
 import ru.droml.databinding.FragmentSearchBinding;
+import ru.droml.utlis.StatusBarUtil;
 
 
 public class SearchFragment extends Fragment {

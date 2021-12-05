@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="?attr/colorSecondaryVariant"
         tools:context=".MainActivity">
 
         <include layout="@layout/toolbar" android:id="@+id/toolbar"/>
@@ -19,15 +20,18 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="1dp"
             app:defaultNavHost="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
             app:layout_constraintVertical_bias="1.0"
-            app:navGraph="@navigation/navigation_graph" />
+            app:navGraph="@navigation/navigation_graph"
+            android:background="?attr/colorPrimaryVariant"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
