@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         StatusBarUtil.setStatusBarMode(this);
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setSupportActionBar(activityMainBinding.toolbar.searchToolbar);
-//        activityMainBinding.navHostFragment.
 
     }
 }
